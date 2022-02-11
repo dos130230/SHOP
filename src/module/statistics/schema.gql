@@ -1,0 +1,11 @@
+type Query {
+  statistics(page:Int limit : Int) : [Statistic!]!
+}
+
+type Statistic {
+  Id : ID
+  Name : String
+  TotalMoney : Float
+  TotalCount : Int
+  message : String
+}

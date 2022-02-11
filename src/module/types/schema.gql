@@ -1,0 +1,16 @@
+
+
+
+type ResData {
+  status : ID
+  message : String!
+  data : Any!
+}
+scalar Token
+
+
+
+scalar  Name
+scalar  Contact
+scalar  Email
+scalar  Upload

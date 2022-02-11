@@ -1,0 +1,17 @@
+type Query {
+  categories(page:Int limit:Int id:Int search : String ) : [Category!]!
+}
+
+
+type Category {
+  categorId : ID!
+  categorName : String!
+}
+
+
+type Mutation {
+  addCategories (categorName : String!): Send!
+  putCategories (categorId : ID! categorName : String!): Send!
+  delCategories (categorId : ID!): Send!
+}
+

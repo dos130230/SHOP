@@ -1,0 +1,31 @@
+type Query {
+  orders(page:Int limit:Int) : [Order!]!
+}
+
+type Order {
+  orderId : ID!
+  userId : ID
+  userName : String
+  products : Any
+  totalPrice : Int
+  isPaid : Boolean!
+  createDate : String!
+}
+
+type Mutation {
+  addOrder(
+    productId : ID!
+    productCount : Int!
+    ) : Send!
+
+  putOrder (
+    orderId : ID!
+    categorId : ID
+    productId : ID
+    productCount : Int
+
+    ) : Send!
+  
+}
+
+scalar Any

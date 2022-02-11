@@ -1,0 +1,17 @@
+type Mutation {
+  login(username : String! password : String!) : Send!,
+
+  register(
+    userName : Name!
+    userPassword : String!
+    userContact : Contact!
+    userEmail : Email!
+    ) : Send!
+}
+
+type Send {
+  status : ID!
+  message : String!
+  token : Token
+}
+

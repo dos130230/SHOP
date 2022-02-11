@@ -1,0 +1,33 @@
+type Query {
+  products : [Product!]!
+}
+
+type Product {
+  productId : ID!
+  productName :String!
+  categorName : String!
+  productPrice : Int!
+}
+
+scalar Upload
+
+type Mutation {
+  addProducts (
+    file : Upload!
+    productName : String!
+    productPrice : Int!
+    productShortDesc : String!
+    productLongDesc : String!
+    categorId : ID!
+  ): Send!
+  putProducts (
+        productId : ID!
+        file : Upload
+        productName : String
+        productPrice : Int
+        productShortDesc : String
+        productLongDesc : String
+        categorId : ID
+    ): Send!
+  delProducts (productId : ID!): Send!
+}
